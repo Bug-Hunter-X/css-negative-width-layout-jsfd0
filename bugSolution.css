@@ -1,0 +1,16 @@
+To prevent negative widths, use `max()` to set a minimum width of 0 or constrain it with `max-width`:
+
+```css
+div {
+  width: calc(max(0, 50% - 10px));
+}
+```
+
+Alternatively, constrain the maximum width to avoid exceeding available space:
+
+```css
+div {
+  width: calc(50% - 10px);
+  max-width: 100%; /* Or another suitable value */
+}
+```
