@@ -1,0 +1,9 @@
+The following CSS rule is causing unexpected behavior:
+
+```css
+div {
+  width: calc(50% - 10px);
+}
+```
+
+This rule intends to make a div take up 50% of its container's width, minus 10px of padding. However, if the container's width is too small, the calculated width can become negative, resulting in unexpected layout issues.  The div might collapse, disappear, or have an unexpected width.
